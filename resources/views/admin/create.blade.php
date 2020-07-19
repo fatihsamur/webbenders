@@ -25,7 +25,7 @@
       </div>
     </div>
 
-    {{--  bok --}}
+    {{--  image --}}
     <div class="row">
       <div class="col-sm-12">
         <div class="form-group">
@@ -34,7 +34,7 @@
         </div>
       </div>
     </div>
-    {{-- bok  --}}
+    {{-- end image  --}}
 
 
     <div class="row">

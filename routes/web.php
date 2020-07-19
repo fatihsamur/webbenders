@@ -32,8 +32,8 @@ Auth::routes();
 // admin
 // pages
 Route::group(['middleware' => ['auth']], function(){
+  Route::get('/leavemealone', 'adminController@index')->name('adminHome');
   Route::get('/create', 'adminController@createBlog')->name('create');
-  Route::get('/admin', 'adminController@index')->name('adminHome');
   Route::get('/edit/{id}', 'adminController@editBlogPage')->name('editBlogPage');
 // methods
   Route::post('/create', 'adminController@storeCreateBlog')->name('storeCreate');

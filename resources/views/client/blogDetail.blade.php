@@ -1,6 +1,6 @@
 @extends('client.layout')
 
-@section('page-title','Blog Detail')
+@section('page-title','Blog')
 
 @section('content')
 <!--================Blog Area =================-->
@@ -31,10 +31,9 @@
 
                   </div>
                   <ul class="social-icons">
-                     <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                     <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                     <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                     <li>
+                        <div class="sharethis-inline-share-buttons"></div>
+                     </li>
                   </ul>
                </div>
                <div class="navigation-area">
@@ -59,21 +58,8 @@
          </div>
          <div class="col-lg-4">
             <div class="blog_right_sidebar">
-               <aside class="single_sidebar_widget search_widget">
-                  <form action="#">
-                     <div class="form-group">
-                        <div class="input-group mb-3">
-                           <input type="text" class="form-control" placeholder='Search Keyword'
-                              onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Keyword'">
-                           <div class="input-group-append">
-                              <button class="btn" type="button"><i class="ti-search"></i></button>
-                           </div>
-                        </div>
-                     </div>
-                     <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-                        type="submit">Search</button>
-                  </form>
-               </aside>
+
+
                <aside class="single_sidebar_widget post_category_widget">
                   <h4 class="widget_title">Category</h4>
                   <ul class="list cat-list">
@@ -95,9 +81,9 @@
                   <h3 class="widget_title">Recent Posts</h3>
                   @forelse ($blogs->take(3) as $blog)
                   <div class="media post_item">
-                     <img src="{{asset('blog_images').'/'.$blog->id.'.jpg'}}" alt="post">
+                     <img class="w-25" src="{{asset('blog_images').'/'.$blog->id.'.jpg'}}" alt="post">
                      <div class="media-body">
-                        <a href="single-blog.html">
+                        <a href="{{route('blogDetail',$blog->id)}}">
                            <h3> {{$blog->title}} </h3>
                         </a>
                         <p> {{$blog->created_at->format('M, d, Y')}} </p>

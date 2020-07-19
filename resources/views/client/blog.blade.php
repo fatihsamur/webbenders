@@ -11,11 +11,7 @@
             <div class="col-lg-8 mb-5 mb-lg-0">
                 <div class="blog_left_sidebar">
 
-
                     @forelse ($blogs as $blog)
-
-
-
 
                     <article class="blog_item">
                         <div class="blog_item_img">
@@ -32,7 +28,6 @@
                                 <h2> {{ $blog->title }} </h2>
                             </a>
                             <p>
-                                {{-- trim() benzeri bişe olursa değişecek --}}
                                 {{Str::limit(str_replace("&nbsp;","",strip_tags($blog->content)),100)}}
                             </p>
                             <ul class="blog-info-link">
@@ -54,21 +49,7 @@
             </div>
             <div class="col-lg-4">
                 <div class="blog_right_sidebar">
-                    <aside class="single_sidebar_widget search_widget">
-                        <form action="#">
-                            <div class="form-group">
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder='Search Keyword'
-                                        onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Keyword'">
-                                    <div class="input-group-append">
-                                        <button class="btn" type="button"><i class="ti-search"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-                                type="submit">Search</button>
-                        </form>
-                    </aside>
+
 
                     <aside class="single_sidebar_widget post_category_widget">
                         <h4 class="widget_title">Category</h4>
@@ -81,9 +62,7 @@
                                 </a>
                             </li>
                             @empty
-
                             @endforelse
-
                         </ul>
                     </aside>
 
@@ -93,20 +72,13 @@
                         <div class="media post_item">
                             <img class="w-25" src="{{asset('blog_images').'/'.$blog->id.'.jpg'}}" alt="post">
                             <div class="media-body">
-
-
-                                <a href="single-blog.html">
+                                <a href="{{route('blogDetail',$blog->id)}}">
                                     <h3> {{$blog->title}} </h3>
                                 </a>
                                 <p> {{$blog->created_at->format('M, d, Y')}} </p>
-
-
-
-
                             </div>
                         </div>
                         @empty
-
                         @endforelse
                     </aside>
 

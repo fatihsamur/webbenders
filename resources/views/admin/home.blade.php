@@ -42,7 +42,6 @@
                   <td class="d-flex justify-content-between">
                     <a href=" {{route('editBlogPage',$blog->id)}} "><i class="fas fa-edit"></i> Edit</a>
                     <a href=" {{route('deleteBlog',$blog->id)}} "><i class="fas fa-trash"></i> delete</a>
-                    <a href=""><i class="fas fa-eye"></i> view</a>
                   </td>
                 </tr>
 

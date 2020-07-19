@@ -9,7 +9,8 @@ use App\Blogs;
 class layoutController extends Controller
 {
     public function index(){
-        return view('client.home');
+        $blogs = Blogs::orderBy('id', 'desc')->get();
+        return view('client.home',compact('blogs'));
     }
     public function about(){
         return view('client.about');
