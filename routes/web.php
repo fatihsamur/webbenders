@@ -13,23 +13,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// client 
+// client side
 Route::get('/', 'layoutController@index')->name('home');
 Route::get('/about', 'layoutController@about')->name('about');
 Route::get('/blog', 'layoutController@blog')->name('blog');
 Route::get('/blog/{id}', 'layoutController@blogDetail')->name('blogDetail');
 Route::get('/contact', 'layoutController@contact')->name('contact');
 Route::get('/services', 'layoutController@services')->name('services');
-Route::get('/portfolio', 'layoutController@portfolio')->name('portfolio');
-Route::get('/portfolioDetail', 'layoutController@portfolioDetail')->name('portfolioDetail');
-
 Route::get('/category/{id}', 'catController@getCategory')->name('category');
 
 
-// auth
+
+    // portfolio pages
+//Route::get('/portfolio', 'layoutController@portfolio')->name('portfolio');
+//Route::get('/portfolioDetail', 'layoutController@portfolioDetail')->name('portfolioDetail');
+
+
+// authentication
 Auth::routes();
 
-// admin
+// admin side
 // pages
 Route::group(['middleware' => ['auth']], function(){
   Route::get('/leavemealone', 'adminController@index')->name('adminHome');

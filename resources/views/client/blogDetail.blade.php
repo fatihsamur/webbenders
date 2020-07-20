@@ -21,14 +21,12 @@
                   <p class="excert">
                      {!! $blog->content !!}
                   </p>
-
                </div>
             </div>
             <div class="navigation-top">
                <div class="d-sm-flex justify-content-between text-center">
                   <p class="like-info"><span class="align-middle"></p>
                   <div class="col-sm-4 text-center my-2 my-sm-0">
-
                   </div>
                   <ul class="social-icons">
                      <li>
@@ -38,28 +36,23 @@
                </div>
                <div class="navigation-area">
                   <div class="row">
-
                   </div>
                </div>
             </div>
             <div class="blog-author">
                <div class="media align-items-center">
-                  <img src="{{asset('img/blog/author.png')}}" alt="">
+                  <img src="{{asset('img/team/author.jpg')}}" alt="">
                   <div class="media-body">
                      <a href="#">
-                        <h4> {{$blog->author}} </h4>
+                        <h4> Web Bender </h4>
                      </a>
-                     <p>Second divided from form fish beast made. Every of seas all gathered use saying you're, he
-                        our dominion twon Second divided from</p>
+                     <p>Technology company who blogs about science</p>
                   </div>
                </div>
             </div>
-
          </div>
          <div class="col-lg-4">
             <div class="blog_right_sidebar">
-
-
                <aside class="single_sidebar_widget post_category_widget">
                   <h4 class="widget_title">Category</h4>
                   <ul class="list cat-list">
@@ -71,10 +64,7 @@
                         </a>
                      </li>
                      @empty
-
                      @endforelse
-
-
                   </ul>
                </aside>
                <aside class="single_sidebar_widget popular_post_widget">
@@ -90,10 +80,8 @@
                      </div>
                   </div>
                   @empty
-
                   @endforelse
                </aside>
-
             </div>
          </div>
       </div>

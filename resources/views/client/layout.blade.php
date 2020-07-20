@@ -101,6 +101,8 @@
                                 </a>
                             </div>
 
+
+
                         </div>
                     </div>
                     <div class="col-xl-3 col-md-6 col-lg-3">
@@ -135,10 +137,19 @@
                                 Follow Us
                             </h3>
                             <ul>
-                                <li><a href="#">Youtube</a></li>
-                                <li><a href="#">Twitter</a></li>
-                                <li><a href="#">Facebook</a></li>
-                                <li><a href="#">Linkedin</a></li>
+                                <li><a target="blank"
+                                        href="https://www.youtube.com/channel/UC9ZuO4o0hgesnVWQH_dFNXQ/featured">Youtube</a>
+                                </li>
+                                <li><a target="blank" href="https://twitter.com/BendersWeb">Twitter</a></li>
+                                {{-- <li><a href="#">Facebook</a></li>
+                                <li><a href="#">Linkedin</a></li> --}}
+                            </ul>
+                            <br>
+                            <h3 class="footer_title">
+                                Our Friends
+                            </h3>
+                            <ul>
+                                <li><a target="blank" href="https://webforest.org/">Webforest</a></li>
                             </ul>
                         </div>
                     </div>

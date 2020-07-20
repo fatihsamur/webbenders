@@ -7,7 +7,7 @@
 <section class="contact-section section_padding">
   <div class="container">
     <div class="row">
-      <div class="col-12">
+      {{-- <div class="col-12">
         <h2 class="contact-title">Get in Touch</h2>
       </div>
       <div class="col-lg-8">
@@ -45,13 +45,17 @@
             <button type="submit" class="button button-contactForm btn_4 boxed-btn">Send Message</button>
           </div>
         </form>
-      </div>
+      </div> --}}
 
       <div class="col-lg-4">
         <div class="media contact-info">
-          <span class="contact-info__icon"><i class="ti-email"></i></span>
           <div class="media-body">
+            <span class="contact-info__icon"><i class="ti-email"></i></span>
             <h3>info@webbenders.com</h3>
+            <br><br>
+            <span class="contact-info__icon"><i class="ti-email"></i></span>
+            <h3>webbenders.tech@gmail.com</h3>
+            <br><br>
             <p>Send us your query anytime!</p>
           </div>
         </div>
